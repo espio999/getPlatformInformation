@@ -2,13 +2,11 @@
   
   <head>
     <script src="platform.js" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const $os = document.querySelector('#os');
-        $os.textContent = platform.os;
-        const $browser = document.querySelector('#browser');
-        $browser.textContent = platform.name;
-      });
+    <script type="JavaScript" defer>
+      const $os = document.querySelector('#os');
+      $os.textContent = platform.os;
+      const $browser = document.querySelector('#browser');
+      $browser.textContent = platform.name;
     </script>
 
   </head>
