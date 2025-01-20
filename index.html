@@ -1,14 +1,14 @@
 <html>
   <head>
-    <script src="platform.js" defer></script>
-  </head>
-  <body>
+    <script src="platform.js"></script>
     <script defer>
       const $os = document.querySelector('#os');
       $os.textContent = platform.os;
       const $browser = document.querySelector('#browser');
       $browser.textContent = platform.name;
     </script>
+  </head>
+  <body>    
     <p>Your os is: <span id="os">...</span></p>
     <p>Your browser is: <span id="browser">...</span></p>
   </body>
