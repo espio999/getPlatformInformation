@@ -1258,3 +1258,10 @@
     root.platform = platform;
   }
 }.call(this));
+
+
+const $os = document.querySelector('#os');
+$os.textContent = platform.os;
+
+const $browser = document.querySelector('#browser');
+$browser.textContent = platform.name;
