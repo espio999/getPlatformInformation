@@ -1267,16 +1267,16 @@ function shouldRedirect() {
     return false;
   }
 
-  if (!(platform.name === null || platform.name.length == 0)) {}
+  if ((platform.name === null || platform.name.length == 0)) {}
   else {
     return false;
   }
     
-  if (!(platform.os.family === null || platform.os.family.length == 0)) {}
+  if ((platform.os.family === null || platform.os.family.length == 0)) {}
   else {
     return false;
   }
-  
+
   return true;
 }
   
