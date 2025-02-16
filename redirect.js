@@ -1267,7 +1267,14 @@ function shouldRedirect() {
     return false;
   }
 
-  if ((platform.name === null || platform.name.length == 0)) {}
+  let isNull_browser = (platform.name === null || platform.name.length == 0);
+  let isNull_os = (platform.os.family === null || platform.os.family.length == 0);
+
+  if (isNull_browser == false && isNull_os == false) {
+    return false;
+  }
+  
+/*   if ((platform.name === null || platform.name.length == 0)) {}
   else {
     return false;
   }
@@ -1275,7 +1282,7 @@ function shouldRedirect() {
   if ((platform.os.family === null || platform.os.family.length == 0)) {}
   else {
     return false;
-  }
+  } */
 
   return true;
 }
