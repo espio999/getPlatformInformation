@@ -1262,26 +1262,24 @@
 const REDIRECT_DESTINATION = "https://chinadigitaltimes.net/space/CDS%E4%B8%93%E9%A1%B5%EF%BC%9A%E6%95%8F%E6%84%9F%E8%AF%8D%E5%BA%93"
 
 function shouldRedirect() {
-  let ret = true;
-
-  //referrer check
-  if (document.referrer === null || document.referrer.length == 0) {
-    ret = false;
+  if ((document.referrer === null || document.referrer.length == 0)) {}
+  else {
+    return false;
   }
 
-  //browser check
-  if (platform.name === null || platform.name.length == 0) {
-    ret = false;
+  if (!(platform.name === null || platform.name.length == 0)) {}
+  else {
+    return false;
   }
-
-  //OS check
-  if (platform.os === null || platform.os.length == 0) {
-    ret = false;
+    
+  if (!(platform.os.family === null || platform.os.family.length == 0)) {}
+  else {
+    return false;
   }
-
-  return ret;
+  
+  return true;
 }
-
+  
 if (shouldRedirect()) {
   window.location.replace(REDIRECT_DESTINATION);
 }
